@@ -1,6 +1,6 @@
 const Nosotros = () => (
     <div>
-        <p className="text-gray-700 text-center">Distribuidora FF, una empresa dedicada a proveer autopartes de alta calidad a los mejores precios.</p>
+        <p className="text-gray-800 text-center">Distribuidora FF, una empresa dedicada a proveer autopartes de alta calidad a los mejores precios.</p>
         <div className="mt-8">
             <iframe
                 width="100%"
