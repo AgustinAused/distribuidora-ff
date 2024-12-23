@@ -6,7 +6,7 @@ const offers = [
     id: 1,
     name: 'Filtro de Aceite Premium',
     price: '$15.00',
-    image: '/images/offer1.jpg', // Imagen existente
+    image: null, // Imagen existente
   },
   {
     id: 2,

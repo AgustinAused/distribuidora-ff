@@ -3,9 +3,9 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 
 const images: string | any[] = [
-//   '/images/product1.jpg',
-//   '/images/product2.jpg',
-//   '/images/product3.jpg',
+  '/images/descarga.jpg',
+  '/images/istockphoto-1.jpg',
+  '/images/istockphoto-2.jpg',
 ];
 
 const ImageCarousel = () => {
@@ -18,6 +18,8 @@ const ImageCarousel = () => {
     <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg">
       <Image
         src={images[current]}
+        width={800}
+        height={400}
         alt={`Slide ${current}`}
         className="w-full h-64 object-cover"
       />
