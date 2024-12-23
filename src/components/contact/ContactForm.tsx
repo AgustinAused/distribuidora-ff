@@ -1,5 +1,3 @@
-// components/ContactForm.tsx
-
 import React, { useState } from "react";
 
 interface ContactFormProps {
@@ -39,7 +37,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full border rounded px-3 py-2"
+          className="w-full border rounded px-3 py-2 text-gray-800 bg-gray-50"
         />
       </div>
       <div>
@@ -53,7 +51,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full border rounded px-3 py-2"
+          className="w-full border rounded px-3 py-2 text-gray-800 bg-gray-50"
         />
       </div>
       <div>
@@ -67,7 +65,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           onChange={handleChange}
           required
           rows={4}
-          className="w-full border rounded px-3 py-2"
+          className="w-full border rounded px-3 py-2 text-gray-800 bg-gray-50"
         ></textarea>
       </div>
       <button
