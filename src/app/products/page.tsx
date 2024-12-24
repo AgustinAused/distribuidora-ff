@@ -32,7 +32,7 @@ export default function ProductsPage() {
   // }, []);
 
   return (
-    <div className="bg-gray-50 min-h-screen py-20">
+    <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
           Nuestro Catálogo de Productos

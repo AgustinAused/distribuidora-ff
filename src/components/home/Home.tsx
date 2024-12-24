@@ -3,7 +3,7 @@ import ImageCarousel from '@/components/home/ImageCarousel';
 import ProductOffers from '@/components/home/ProductOffers';
 
 const Home = () => (
-    <section id="home" className="bg-gray-50 py-20 text-center">
+    <section id="home" className="py-20 text-center">
         <div className="container mx-auto px-6">
             {/* Título Principal */}
             <h1 className="text-4xl font-extrabold text-green-600">
