@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { MoonIcon } from "./switch/MoonIcon";
 import { SunIcon } from "./switch/SunIcon";
-import { Switch } from "@nextui-org/react";
+import {Switch} from "@nextui-org/switch";
 
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
@@ -25,16 +25,14 @@ export function ThemeSwitcher() {
   };
 
   return (
-    <div>
-      <Switch
-        checked={isDarkMode}
-        onChange={handleThemeChange}
-        size="lg"
-        color="success"
-        aria-label="Toggle dark mode"
-        startContent={<SunIcon className="text-yellow-500" />}
-        endContent={<MoonIcon className="text-blue-500" />}
-      />
-    </div>
+       <Switch
+      defaultSelected
+      color="success"
+      onChange={handleThemeChange}
+      endContent={<MoonIcon />}
+      size="lg"
+      startContent={<SunIcon />}
+    >
+    </Switch>
   );
 }

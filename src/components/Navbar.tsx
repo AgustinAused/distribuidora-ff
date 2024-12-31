@@ -42,10 +42,9 @@ const Navbar = () => (
             </Link>
           </li>
         </ul>
-
-        {/* Theme Switcher */}
-        <ThemeSwitcher />
       </div>
+      {/* Theme Switcher */}
+      <ThemeSwitcher />
     </div>
   </nav>
 );
