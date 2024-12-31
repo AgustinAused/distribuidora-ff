@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { FaImage } from 'react-icons/fa';
 
 interface ProductCardProps {
   image: string;
@@ -11,11 +12,18 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ image, name, description, price, onBuyClick }) => (
   <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-    <Image
-      src={image}
-      alt={name}
-      className="w-full h-48 object-cover bg-pastel-light"
-    />
+    <div className='justify-center items-center h-48 w-full bg-gray-200'>
+    {image ? (
+                <Image
+                  src={image}
+                  alt={name}
+                  className="w-full h-full object-cover rounded-md"
+                />
+              ) : (
+                <FaImage className="text-gray-400 h-48 w-full" />
+              )}
+    </div>
+    
     <div className="p-4">
       <h3 className="text-lg font-semibold text-pastel-dark">{name}</h3>
       <p className="text-sm text-pastel-gray mt-2">{description}</p>

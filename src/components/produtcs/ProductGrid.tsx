@@ -2,7 +2,8 @@ import React from 'react';
 import ProductCard from './ProductCard';
 
 interface Product {
-  id: number;
+  autopart_id: string ,
+  stock: number;
   name: string;
   description: string;
   price: string;
@@ -17,7 +18,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => (
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
     {products.map((product) => (
       <ProductCard
-        key={product.id}
+        key={product.autopart_id}
         image={product.image}
         name={product.name}
         description={product.description}

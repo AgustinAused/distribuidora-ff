@@ -6,7 +6,8 @@ import { Spinner } from '@material-tailwind/react';
 import { getAllProducts } from '@/api/productsApi';
 
 interface Product {
-  id: number;
+  autopart_id: string ,
+  stock: number;
   name: string;
   description: string;
   price: string;
@@ -15,7 +16,7 @@ interface Product {
 
 export default function ProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
