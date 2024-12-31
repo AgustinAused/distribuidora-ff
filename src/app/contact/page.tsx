@@ -16,12 +16,12 @@ interface ContactFormData {
 export default function ContactPage() {
   const handleFormSubmit = async (formData: ContactFormData) => {
     try {
-      const response = await sendContactForm(formData);
+      const response : any = await sendContactForm(formData);
 
-      if (response.data.message) {
+      if (response.message) {
         alert("Mensaje enviado exitosamente.");
       } else {
-        const errorData = response.data; // Directamente accedemos a los datos de la respuesta
+        const errorData = response.error; // Directamente accedemos a los datos de la respuesta
         alert(`Error: ${errorData.error || "No se pudo enviar el mensaje"}`);
       }
     } catch (error) {
