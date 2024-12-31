@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import ProductGrid from '@/components/produtcs/ProductGrid';
 import { Spinner } from '@material-tailwind/react';
+import { getAllProducts } from '@/api/productsApi';
 
 interface Product {
   id: number;
@@ -16,20 +17,19 @@ export default function ProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(false);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch('https://fakestoreapi.com/products');
-  //       const data = await response.json();
-  //       setProducts(data);
-  //     } catch (error) {
-  //       console.error('Error al cargar productos:', error);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await getAllProducts();
+        setProducts(response);
+      } catch (error) {
+        console.error('Error al cargar productos:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <div className="min-h-screen py-20">
