@@ -2,7 +2,7 @@ import apiClient from './index';
 
 // Crear un producto
 export const createProduct = async (productData) => {
-  const response = await apiClient.post('/product', productData);
+  const response = await apiClient.post('/product/', productData);
   return response.data;
 };
 
@@ -14,7 +14,7 @@ export const getProductByAutopartId = async (autopartId) => {
 
 // Obtener todos los productos
 export const getAllProducts = async () => {
-  const response = await apiClient.get('/product');
+  const response = await apiClient.get('/product/');
   return response.data;
 };
 
