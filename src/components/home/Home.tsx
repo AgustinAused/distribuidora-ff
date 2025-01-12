@@ -2,7 +2,11 @@ import Link from 'next/link';
 import ImageCarousel from '@/components/home/ImageCarousel';
 import ProductOffers from '@/components/home/ProductOffers';
 
-const Home = () => (
+interface HomeProps {
+    offers: any[]; // Replace 'any[]' with the appropriate type if known
+}
+
+const Home = ({ offers }: HomeProps) => (
     <section id="home" className="py-20 text-center">
         <div className="container mx-auto px-6">
             {/* Título Principal */}
@@ -23,7 +27,7 @@ const Home = () => (
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">
                     Ofertas Especiales
                 </h2>
-                <ProductOffers />
+                <ProductOffers offers={offers} />
             </div>
 
             {/* Botón para Ver Más Productos */}

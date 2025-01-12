@@ -29,3 +29,10 @@ export const deleteProduct = async (autopartId) => {
   const response = await apiClient.delete(`/product/${autopartId}`);
   return response.data;
 };
+
+
+// Ofertas de productos
+export const getOffers = async () => {
+  const response = await apiClient.get('/product/offers');
+  return response.data;
+};
